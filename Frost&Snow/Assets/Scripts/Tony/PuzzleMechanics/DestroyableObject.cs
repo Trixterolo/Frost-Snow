@@ -7,7 +7,7 @@ public class DestroyableObject : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Interactable"))
+        if (collision.CompareTag("Interactable") || collision.CompareTag("Projectile"))
         {
             gameObject.SetActive(false);
             Destroy(gameObject); 
