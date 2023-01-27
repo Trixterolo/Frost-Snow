@@ -23,17 +23,6 @@ public class FrostMovement : MonoBehaviour
     private Vector2 movementInput = Vector2.zero;
     private Vector2 jumpInput;
 
-    //private void OnEnable()
-    //{
-    //    inputAction.Enable();
-    //}
-
-    //private void OnDisable()
-    //{
-    //    inputAction.Disable();
-    //}
-
-
     private void Awake()
     {
         rb2d= GetComponent<Rigidbody2D>();
