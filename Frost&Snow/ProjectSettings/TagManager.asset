@@ -8,6 +8,8 @@ TagManager:
   - Interactable
   - Switch
   - StayOnTrigger
+  - Snow
+  - Frost
   layers:
   - Default
   - TransparentFX

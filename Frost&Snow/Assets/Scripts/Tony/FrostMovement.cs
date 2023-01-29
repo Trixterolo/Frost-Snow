@@ -38,12 +38,12 @@
 //        //GameObject.DontDestroyOnLoad(this.gameObject);
 
 //        rb2d = GetComponent<Rigidbody2D>();
-//        spriteRenderer= GetComponent<SpriteRenderer>();
+//        spriteRenderer = GetComponent<SpriteRenderer>();
 //    }
 //    // Start is called before the first frame update
 //    void Start()
 //    {
-        
+
 //    }
 //    private void Update()
 //    {
@@ -66,7 +66,7 @@
 
 //    private void OnJump(InputValue jumpValue)
 //    {
-//        jumpInput= jumpValue.Get<Vector2>();
+//        jumpInput = jumpValue.Get<Vector2>();
 //    }
 
 //    private void PlayerMoving()
@@ -87,7 +87,7 @@
 //                //gameObject.BroadcastMessage("IsFacingRight", true);
 //            }
 
-//           // IsMoving = true;
+//            // IsMoving = true;
 //        }
 //        else
 //        {

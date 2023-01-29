@@ -6,7 +6,7 @@ using UnityEngine;
 public class OpenGate : MonoBehaviour
 {
     Collider2D playerCollider;
-   // Animator gateAnimator;
+    Animator gateAnimator;
 
     [SerializeField] private bool isGateOpen;
 
@@ -15,7 +15,7 @@ public class OpenGate : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //gateAnimator = GetComponent<Animator>();
+        gateAnimator = GetComponent<Animator>();
         playerCollider = GetComponent<Collider2D>();
     }
 
@@ -66,7 +66,7 @@ public class OpenGate : MonoBehaviour
     private void SetState(bool open)
     {
         isGateOpen = open; //Så vi starter med at døra er Closed. Dermed er SetState = true.
-        //gateAnimator.SetBool("Open", open);
+        gateAnimator.SetBool("Open", open);
 
         playerCollider.isTrigger = open;
     }

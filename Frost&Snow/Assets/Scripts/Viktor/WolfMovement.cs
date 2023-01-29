@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class WolfMovement : MonoBehaviour
@@ -10,12 +11,17 @@ public class WolfMovement : MonoBehaviour
     private float jumpingPower = 8f;
 
     [SerializeField] private Rigidbody2D rb;
+    private SpriteRenderer spriteRenderer;
+    List<Collider2D> switchColliders = new List<Collider2D>();
+
 
 
     public LayerMask ground;
+
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     void Update()
@@ -40,7 +46,7 @@ public class WolfMovement : MonoBehaviour
 
             Vector2 position = transform.position;
             Vector2 direction = Vector2.down;
-            float distance = 0.7f;
+            float distance = 1.2f;
 
 
 
@@ -53,10 +59,36 @@ public class WolfMovement : MonoBehaviour
 
             return false;
         }
+
+        if (Input.GetKeyDown(KeyCode.T))
+        {
+            switchColliders.ForEach(n => n.SendMessage("Use", SendMessageOptions.DontRequireReceiver));
+        }
     }
 
     private void FixedUpdate()
     {
         rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
+
+        //flip based on direction
+        if (rb.velocity.x < 0)
+        {
+            spriteRenderer.flipX = true;
+            //gameObject.BroadcastMessage("IsFacingRight", false);
+        }
+        else if (rb.velocity.x > 0)
+        {
+            spriteRenderer.flipX = false;
+            //gameObject.BroadcastMessage("IsFacingRight", true);
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D switches)
+    {
+        switchColliders.Add(switches);
+    }
+    private void OnTriggerExit2D(Collider2D switches)
+    {
+        switchColliders.Remove(switches);
     }
 }

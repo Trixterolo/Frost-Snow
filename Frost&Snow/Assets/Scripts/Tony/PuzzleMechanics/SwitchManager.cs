@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SwitchManager : MonoBehaviour
 {
-    //Animator switchAnimator;
+    Animator switchAnimator;
 
     public enum ResetType { Never, OnUse, Timed, Immediately } //never reset, default, reset time, instant.
     public ResetType resetType = ResetType.OnUse; //default state/behaviour.
@@ -20,7 +20,7 @@ public class SwitchManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //switchAnimator = GetComponent<Animator>();
+        switchAnimator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -69,7 +69,7 @@ public class SwitchManager : MonoBehaviour
     {
         switchOn = on; //Så vi starter med at switch er Off. Dermed er SetState = true.
 
-        //switchAnimator.SetBool("On", on);
+        switchAnimator.SetBool("On", on);
 
         if (on)
         {

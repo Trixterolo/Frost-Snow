@@ -12,14 +12,11 @@ public class GoalReached : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D player)
     {
         playerReached++;
-        if(player.CompareTag("Player") && playerReached >= playerRequirement)
+        if((player.CompareTag("Frost") || player.CompareTag("Snow")) && playerReached >= playerRequirement)
         {
-            //Next stage
-          //  goalOpen= true;
             Debug.Log("Next level!");
             levelLoader.LoadNextLevel();
         }
-       // goalOpen = false;
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
