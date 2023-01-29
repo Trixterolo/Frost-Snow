@@ -12,10 +12,10 @@ public class LevelLoader : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
-        {
-            LoadNextLevel();
-        }
+        //if (Input.GetMouseButtonDown(0))
+        //{
+        //    LoadNextLevel();
+        //}
     }
 
     public void LoadNextLevel()
@@ -23,7 +23,7 @@ public class LevelLoader : MonoBehaviour
         StartCoroutine(LoadLevel(sceneName));
     }
 
-    private IEnumerator LoadLevel(string sceneIndex)
+    public IEnumerator LoadLevel(string sceneIndex)
     {
         //Play animation
         transition.SetTrigger("Start");
