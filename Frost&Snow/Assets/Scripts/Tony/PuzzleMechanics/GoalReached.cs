@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class GoalReached : MonoBehaviour
 {
+    [SerializeField] LevelLoader levelLoader;
     [SerializeField] int playerRequirement;
     public int playerReached;
    // public bool goalOpen = false;
@@ -16,6 +17,7 @@ public class GoalReached : MonoBehaviour
             //Next stage
           //  goalOpen= true;
             Debug.Log("Next level!");
+            levelLoader.LoadNextLevel();
         }
        // goalOpen = false;
     }

@@ -8,4 +8,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MainScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/TonyLevels/Level1.unity
+    guid: abf0ae03587a89145aabc0033aa06a13
+  - enabled: 1
+    path: Assets/Scenes/TonyLevels/CampScene1.unity
+    guid: 88857a584d463774aada1eb3f0982956
   m_configObjects: {}
