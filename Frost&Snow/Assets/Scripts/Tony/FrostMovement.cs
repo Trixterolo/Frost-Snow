@@ -10,6 +10,9 @@ public class FrostMovement : MonoBehaviour
     SpriteRenderer spriteRenderer;
     InputAction inputAction;
 
+    ////static means there can only be ONE of it in the ENTIRE game.
+    //public static FrostMovement Instance;
+
     [SerializeField] float moveSpeed = 50f;
     [SerializeField] float jumpForce = 50f;
     [SerializeField] private Transform interactor;
@@ -25,7 +28,16 @@ public class FrostMovement : MonoBehaviour
 
     private void Awake()
     {
-        rb2d= GetComponent<Rigidbody2D>();
+        //if(Instance != null)
+        //{
+        //    //if theres a duplicate of the player object, destroy it and keep only ONE.
+        //    Destroy(this.gameObject);
+        //    return;
+        //}
+        //Instance = this;
+        //GameObject.DontDestroyOnLoad(this.gameObject);
+
+        rb2d = GetComponent<Rigidbody2D>();
         spriteRenderer= GetComponent<SpriteRenderer>();
     }
     // Start is called before the first frame update
