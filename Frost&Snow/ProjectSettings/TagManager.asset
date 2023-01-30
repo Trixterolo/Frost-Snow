@@ -10,6 +10,7 @@ TagManager:
   - StayOnTrigger
   - Snow
   - Frost
+  - Projectile
   layers:
   - Default
   - TransparentFX

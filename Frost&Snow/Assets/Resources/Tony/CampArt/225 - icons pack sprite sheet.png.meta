@@ -1230,7 +1230,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 225 - icons pack sprite sheet_53
+      name: Carrot
       rect:
         serializedVersion: 2
         x: 195
@@ -5109,6 +5109,7 @@ TextureImporter:
       225 - icons pack sprite sheet_233: -1015138732
       225 - icons pack sprite sheet_128: -1252918558
       225 - icons pack sprite sheet_66: -151159705
+      Carrot: -1187641193
       225 - icons pack sprite sheet_177: -760357644
       225 - icons pack sprite sheet_78: 1634887731
       225 - icons pack sprite sheet_150: -1348443563
@@ -5221,7 +5222,6 @@ TextureImporter:
       225 - icons pack sprite sheet_24: 1391278422
       225 - icons pack sprite sheet_68: -2118407988
       225 - icons pack sprite sheet_116: -2029890287
-      225 - icons pack sprite sheet_53: -1187641193
       225 - icons pack sprite sheet_60: -385276502
       225 - icons pack sprite sheet_191: 448321710
       225 - icons pack sprite sheet_39: -387427717
