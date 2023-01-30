@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5117400651614762341}
   - component: {fileID: 5117400651614762342}
   - component: {fileID: 1057854170}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: StepOnSwitch
   m_TagString: Untagged
   m_Icon: {fileID: 0}

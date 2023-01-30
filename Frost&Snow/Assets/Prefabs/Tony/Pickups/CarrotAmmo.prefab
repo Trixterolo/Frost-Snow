@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3949919636188498184}
   - component: {fileID: 1846619213483017165}
   m_Layer: 0
-  m_Name: PineconeAmmo
+  m_Name: CarrotAmmo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

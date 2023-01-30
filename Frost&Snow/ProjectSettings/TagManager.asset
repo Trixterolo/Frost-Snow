@@ -11,6 +11,8 @@ TagManager:
   - Snow
   - Frost
   - Projectile
+  - HangingObject
+  - Chain
   layers:
   - Default
   - TransparentFX
@@ -21,7 +23,7 @@ TagManager:
   - Ground
   - Player1
   - Player2
-  - 
+  - grabLayer
   - 
   - 
   - 

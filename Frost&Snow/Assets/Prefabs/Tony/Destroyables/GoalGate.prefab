@@ -127,6 +127,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGateOpen: 0
   switchesToOpen: 1
+  switches: 0
 --- !u!95 &319796419774694405
 Animator:
   serializedVersion: 5

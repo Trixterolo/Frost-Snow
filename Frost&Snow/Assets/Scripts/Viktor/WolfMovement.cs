@@ -4,8 +4,6 @@ using UnityEngine;
 public class WolfMovement : MonoBehaviour
 {
     private float horizontal;
-    [SerializeField]
-    private float speed = 8f;
 
     [SerializeField]
     private float jumpingPower = 8f;
@@ -13,21 +11,92 @@ public class WolfMovement : MonoBehaviour
     [SerializeField] private Rigidbody2D rb;
     private SpriteRenderer spriteRenderer;
     List<Collider2D> switchColliders = new List<Collider2D>();
-
-
-
     public LayerMask ground;
+
+    [SerializeField] WolfBite wolfBite;
+    [HideInInspector] public int moveState;
+    [SerializeField] private float defaultSpeed = 8f;
+    private float currentSpeed;
+    private float grabSpeed = 0f;
+
+    bool isFacingRight = true;
+
+
+
 
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+        wolfBite = GetComponent<WolfBite>();
     }
 
     void Update()
     {
         horizontal = Input.GetAxisRaw("HorizontalWolf");
 
+        MoveState();
+
+        if (Input.GetKeyDown(KeyCode.T))
+        {
+            //switchColliders.ForEach(n => n.SendMessage("Use", SendMessageOptions.DontRequireReceiver));
+        }
+    }
+
+    private void FixedUpdate()
+    {
+        rb.velocity = new Vector2(horizontal * currentSpeed, rb.velocity.y);
+
+        //flip based on direction
+        if (rb.velocity.x < 0 && isFacingRight)
+        {
+            Flip();
+
+                //gameObject.BroadcastMessage("IsFacingRight", false);
+        }
+        else if (rb.velocity.x > 0 && !isFacingRight)
+        {
+            Flip();
+
+                //gameObject.BroadcastMessage("IsFacingRight", true);
+        }
+        if(moveState == 0)
+        {
+            currentSpeed = defaultSpeed;
+        }
+        else
+        {
+            currentSpeed = grabSpeed;
+        }
+    }
+
+
+    private void OnTriggerEnter2D(Collider2D switches)
+    {
+        switchColliders.Add(switches);
+    }
+    private void OnTriggerExit2D(Collider2D switches)
+    {
+        switchColliders.Remove(switches);
+    }
+
+    private void MoveState()
+    {
+        switch (moveState)
+        {
+            case 0:
+                Jumping();
+                break;
+
+            case 1:
+                break;
+
+
+        }
+    }
+
+    private void Jumping()
+    {
         //Jump
         if (Input.GetKeyDown(KeyCode.W) && IsGrounded())
         {
@@ -39,11 +108,8 @@ public class WolfMovement : MonoBehaviour
             rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.5f);
         }
 
-        //Raycast grounded check
         bool IsGrounded()
         {
-
-
             Vector2 position = transform.position;
             Vector2 direction = Vector2.down;
             float distance = 1.2f;
@@ -58,37 +124,16 @@ public class WolfMovement : MonoBehaviour
             }
 
             return false;
-        }
 
-        if (Input.GetKeyDown(KeyCode.T))
-        {
-            switchColliders.ForEach(n => n.SendMessage("Use", SendMessageOptions.DontRequireReceiver));
         }
     }
 
-    private void FixedUpdate()
-    {
-        rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
 
-        //flip based on direction
-        if (rb.velocity.x < 0)
-        {
-            spriteRenderer.flipX = true;
-            //gameObject.BroadcastMessage("IsFacingRight", false);
-        }
-        else if (rb.velocity.x > 0)
-        {
-            spriteRenderer.flipX = false;
-            //gameObject.BroadcastMessage("IsFacingRight", true);
-        }
-    }
+    private void Flip()
+    {
+        // Switch the way the player is labelled as facing.
+        isFacingRight = !isFacingRight;
 
-    private void OnTriggerEnter2D(Collider2D switches)
-    {
-        switchColliders.Add(switches);
-    }
-    private void OnTriggerExit2D(Collider2D switches)
-    {
-        switchColliders.Remove(switches);
+        transform.Rotate(0f, 180f, 0f);
     }
 }
