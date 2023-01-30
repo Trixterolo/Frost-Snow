@@ -10,14 +10,13 @@ GameObject:
   m_Component:
   - component: {fileID: 6120256016712340937}
   - component: {fileID: 6120256016712340939}
-  - component: {fileID: 6120256016712340936}
   m_Layer: 0
-  m_Name: Interactor
+  m_Name: GrabPoint
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &6120256016712340937
 Transform:
   m_ObjectHideFlags: 0
@@ -85,22 +84,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!70 &6120256016712340936
-CapsuleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6120256016712342070}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 1, y: 1}
-  m_Direction: 0
 --- !u!1 &6120256016845160422
 GameObject:
   m_ObjectHideFlags: 0
@@ -115,6 +98,7 @@ GameObject:
   - component: {fileID: 6120256016845160443}
   - component: {fileID: 6120256016845160440}
   - component: {fileID: 6120256016845160441}
+  - component: {fileID: 1466071662}
   m_Layer: 7
   m_Name: Frost
   m_TagString: Frost
@@ -275,9 +259,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2220e1e827f257e469ba832ab1d66da0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 8
   jumpingPower: 10
   rb: {fileID: 0}
   ground:
     serializedVersion: 2
     m_Bits: 64
+  wolfBite: {fileID: 0}
+  moveState: 0
+  defaultSpeed: 10
+--- !u!114 &1466071662
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6120256016845160422}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c6b7d94f0d628a45963c3121a9c4429, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  grabPoint: {fileID: 6120256016712340937}
+  grabLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  wolfMovement: {fileID: 0}
+  openGate: {fileID: 0}
+  colliderChainHead: {fileID: 0}

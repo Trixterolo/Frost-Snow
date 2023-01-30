@@ -11,7 +11,7 @@ public class OpenGate : MonoBehaviour
     [SerializeField] private bool isGateOpen;
 
     [SerializeField] private int switchesToOpen;
-    private int switches;
+    public int switches;
     // Start is called before the first frame update
     void Start()
     {
@@ -63,12 +63,23 @@ public class OpenGate : MonoBehaviour
         }
 
     }
-    private void SetState(bool open)
+    public void SetState(bool open)
     {
         isGateOpen = open; //Så vi starter med at døra er Closed. Dermed er SetState = true.
         gateAnimator.SetBool("Open", open);
 
         playerCollider.isTrigger = open;
+    }
+
+    public void KeyPickedUp()
+    {
+        switches++;
+        if (switches >= switchesToOpen)
+        {
+            SetState(true);
+            Debug.Log("Door Open!");
+
+        }
     }
 }
 

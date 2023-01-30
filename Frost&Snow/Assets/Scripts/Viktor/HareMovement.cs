@@ -13,13 +13,24 @@ public class HareMovement : MonoBehaviour
     private SpriteRenderer spriteRenderer;
     List<Collider2D> switchColliders = new List<Collider2D>();
 
-
     public LayerMask ground;
+
+    Animator animator;
+    private string currentState;
+    private bool isFacingRight = true;
+
+    //Animation States, can also be done witn Enum
+    const string SNOW_IDLE = "Snow_Idle";
+    const string SNOW_RUN = "Snow_Run";
+    const string SNOW_JUMP = "Snow_Jump";
+   // const string SNOW_SHOOT = "Snow_Shoot";
+
 
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+        animator = GetComponent<Animator>();
 
     }
 
@@ -31,12 +42,14 @@ public class HareMovement : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.UpArrow) && IsGrounded())
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
+            ChangeAnimationState(SNOW_JUMP);
 
         }
 
         if (Input.GetKeyUp(KeyCode.UpArrow) && rb.velocity.y > 0f)
         {
             rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.5f);
+            ChangeAnimationState(SNOW_JUMP);
         }
 
 
@@ -45,6 +58,7 @@ public class HareMovement : MonoBehaviour
         {
             switchColliders.ForEach(n => n.SendMessage("Use", SendMessageOptions.DontRequireReceiver));
         }
+
     }
 
 
@@ -53,19 +67,36 @@ public class HareMovement : MonoBehaviour
         rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
 
         //flip based on direction
-        if (rb.velocity.x < 0)
+        if (rb.velocity.x < 0 && isFacingRight)
         {
-            spriteRenderer.flipX = true;
+            Flip();
+
             //gameObject.BroadcastMessage("IsFacingRight", false);
         }
-        else if (rb.velocity.x > 0)
+        else if (rb.velocity.x > 0 && !isFacingRight)
         {
-            spriteRenderer.flipX = false;
+            Flip();
+
             //gameObject.BroadcastMessage("IsFacingRight", true);
         }
+
+        //Animations
+        if (IsGrounded() && rb.velocity.y <= Mathf.Epsilon)
+        {
+
+            if(horizontal != 0)
+            {
+                ChangeAnimationState(SNOW_RUN);
+            }
+            else
+            {
+                ChangeAnimationState(SNOW_IDLE);
+            }
+        }
+
     }
     //Raycast grounded check
-    private bool IsGrounded()
+    public bool IsGrounded()
     {
 
 
@@ -94,4 +125,24 @@ public class HareMovement : MonoBehaviour
         switchColliders.Remove(switches);
     }
 
+    private void ChangeAnimationState(string newState)
+    {
+        //stop the same animation from interrupting itself
+        if (currentState == newState) return;
+
+        //play animation
+        animator.Play(newState);
+
+        //reassign the current state
+        currentState = newState;
+    }
+
+
+    private void Flip()
+    {
+        // Switch the way the player is labelled as facing.
+        isFacingRight = !isFacingRight;
+
+        transform.Rotate(0f, 180f, 0f);
+    }
 }
