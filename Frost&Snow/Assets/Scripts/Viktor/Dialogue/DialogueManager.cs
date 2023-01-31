@@ -20,6 +20,8 @@ public class DialogueManager : MonoBehaviour
 
     [SerializeField] private GameObject continueIcon;
 
+    
+
     [SerializeField] private TextMeshProUGUI dialogueText;
     [SerializeField] private TextMeshProUGUI displayNameText;
 

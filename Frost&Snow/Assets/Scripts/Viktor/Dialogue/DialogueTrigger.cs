@@ -10,6 +10,8 @@ public class DialogueTrigger : MonoBehaviour
     [Header("Ink JSON")]
     [SerializeField] private TextAsset inkJSON;
 
+    [SerializeField] private GameObject pressButton;
+
     private bool playerInRange;
 
     private void Awake()
@@ -18,8 +20,12 @@ public class DialogueTrigger : MonoBehaviour
         visualCue.SetActive(false);
     }
 
+    
+
     private void Update()
     {
+        //This is if you want to trigger by interacting inside a collider
+
         if (playerInRange && !DialogueManager.GetInstance().dialogueIsPlaying)
         {
             visualCue.SetActive(true);
@@ -30,6 +36,8 @@ public class DialogueTrigger : MonoBehaviour
         } else
         {
             visualCue.SetActive(false);
+            pressButton.SetActive(false);
+            
         }
     }
 
