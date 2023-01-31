@@ -3107,10 +3107,6 @@ PrefabInstance:
       propertyPath: openGate
       value: 
       objectReference: {fileID: 1151910528}
-    - target: {fileID: 1466071662, guid: c973efcb6abe18a418e44e8d948d7b48, type: 3}
-      propertyPath: colliderChainHead
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 6120256016845160422, guid: c973efcb6abe18a418e44e8d948d7b48, type: 3}
       propertyPath: m_Name
       value: Frost
