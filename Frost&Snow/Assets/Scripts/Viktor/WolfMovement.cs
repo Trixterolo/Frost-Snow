@@ -37,10 +37,10 @@ public class WolfMovement : MonoBehaviour
 
         MoveState();
 
-        if (Input.GetKeyDown(KeyCode.T))
-        {
-            //switchColliders.ForEach(n => n.SendMessage("Use", SendMessageOptions.DontRequireReceiver));
-        }
+        //if (Input.GetKeyDown(KeyCode.T))
+        //{
+        //    //switchColliders.ForEach(n => n.SendMessage("Use", SendMessageOptions.DontRequireReceiver));
+        //}
     }
 
     private void FixedUpdate()

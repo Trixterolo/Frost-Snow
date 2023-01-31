@@ -62,7 +62,7 @@ public class WolfBite : MonoBehaviour
 
     private void GrabChain()
     {
-        if (Input.GetKeyDown(KeyCode.Y))
+        if (Input.GetKeyDown(KeyCode.R))
         {
             RaycastHit2D hitObject = Physics2D.Raycast(transform.position, Vector2.right, maxDistance, grabLayer);
             if (hitObject)
@@ -78,7 +78,7 @@ public class WolfBite : MonoBehaviour
 
     private void ReleaseChain()
     {
-        if (Input.GetKeyUp(KeyCode.Y))
+        if (Input.GetKeyUp(KeyCode.R))
         {
             currentObject = null;
             openGate.KeyPickedUp();
