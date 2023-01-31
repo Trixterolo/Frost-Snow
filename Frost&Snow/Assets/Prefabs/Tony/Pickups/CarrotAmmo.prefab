@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3949919636188498187}
   - component: {fileID: 3949919636188498184}
   - component: {fileID: 1846619213483017165}
+  - component: {fileID: 1702287088}
   m_Layer: 0
   m_Name: CarrotAmmo
   m_TagString: Untagged
@@ -97,4 +98,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c4268c05fd92ab498f0d4179ea0eba8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pineconeAmmo: 0
+  bulletAmmo: {fileID: 0}
+  arrowAimRenderer: {fileID: 0}
+  ammoText: {fileID: 0}
+  carrotAmmo: 0
+--- !u!70 &1702287088
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3949919636188498185}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 0.5625, y: 1}
+  m_Direction: 0

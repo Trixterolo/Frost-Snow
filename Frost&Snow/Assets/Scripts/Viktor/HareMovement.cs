@@ -123,6 +123,7 @@ public class HareMovement : MonoBehaviour
     private void OnTriggerExit2D(Collider2D switches)
     {
         switchColliders.Remove(switches);
+        switchColliders.Clear();
     }
 
     private void ChangeAnimationState(string newState)

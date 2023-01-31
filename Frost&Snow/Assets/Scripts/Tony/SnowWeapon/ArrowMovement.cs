@@ -4,21 +4,16 @@ using UnityEngine;
 
 public class ArrowMovement : MonoBehaviour
 {
-    public float rotationSpeed = 0.5f;
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
+    public float rotationSpeed = 2f;
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.O))
+        if (Input.GetKey(KeyCode.Keypad2))
         {
             transform.Rotate(Vector3.back * rotationSpeed);
         }
-        if (Input.GetKey(KeyCode.I))
+        if (Input.GetKey(KeyCode.Keypad1))
         {
             transform.Rotate(Vector3.forward * rotationSpeed);
         }

@@ -4,14 +4,32 @@ using UnityEngine;
 
 public class SnowWeapon : MonoBehaviour
 {
-    [SerializeField] int pineconeAmmo = 0;
+    [SerializeField] InstantiateBullet bulletAmmo;
+    [SerializeField] SpriteRenderer arrowAimRenderer;
+    [SerializeField] GameObject ammoText;
+
+    private void Awake()
+    {
+        arrowAimRenderer.enabled = false;
+    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Snow"))
         {
-            pineconeAmmo++;
-            Debug.Log("Pinecone Picked Up!");
-            Destroy(gameObject);
+            if(bulletAmmo) 
+            {
+                if(!arrowAimRenderer.enabled)
+                {
+                    arrowAimRenderer.enabled = true;
+                }
+                if (!ammoText.active)
+                {
+                    ammoText.active = true;
+                }
+                bulletAmmo.AddAmmo(bulletAmmo.maxAmmosize);
+                Debug.Log("Carrot Picked Up!");
+                Destroy(gameObject);
+            }
         }  
     }
 }

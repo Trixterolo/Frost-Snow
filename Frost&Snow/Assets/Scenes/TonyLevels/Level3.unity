@@ -690,6 +690,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6093422726737788227, guid: d5a184523d1c70c42924284b545095cf, type: 3}
   m_PrefabInstance: {fileID: 766330533}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &822145491 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1911174546920164402, guid: e4366f647e433e64dbf02fd5c88dc20a, type: 3}
+  m_PrefabInstance: {fileID: 80408563}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7772def81b51ffe4d8784c7aa3fa14af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &873311034
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -697,6 +708,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1846619213483017165, guid: ef9d789d583186e42ae1836f48454c96, type: 3}
+      propertyPath: ammoText
+      value: 
+      objectReference: {fileID: 2020871514}
+    - target: {fileID: 1846619213483017165, guid: ef9d789d583186e42ae1836f48454c96, type: 3}
+      propertyPath: bulletAmmo
+      value: 
+      objectReference: {fileID: 822145491}
+    - target: {fileID: 1846619213483017165, guid: ef9d789d583186e42ae1836f48454c96, type: 3}
+      propertyPath: arrowAimRenderer
+      value: 
+      objectReference: {fileID: 1907870018}
     - target: {fileID: 3949919636188498185, guid: ef9d789d583186e42ae1836f48454c96, type: 3}
       propertyPath: m_Name
       value: CarrotAmmo
@@ -999,6 +1022,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 672263059, guid: 76bdabc2740ee8741982a89fa7964347, type: 3}
+      propertyPath: bullet
+      value: 
+      objectReference: {fileID: 822145491}
     - target: {fileID: 7388913511883731284, guid: 76bdabc2740ee8741982a89fa7964347, type: 3}
       propertyPath: m_Name
       value: LevelLoader
@@ -1046,10 +1073,6 @@ PrefabInstance:
     - target: {fileID: 7388913511883731285, guid: 76bdabc2740ee8741982a89fa7964347, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7388913511883731286, guid: 76bdabc2740ee8741982a89fa7964347, type: 3}
-      propertyPath: sceneName
-      value: Level1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 76bdabc2740ee8741982a89fa7964347, type: 3}
@@ -7785,6 +7808,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 127476a31509c904088d461c83364241, type: 3}
+--- !u!212 &1907870018 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 5023094674277004983, guid: e4366f647e433e64dbf02fd5c88dc20a, type: 3}
+  m_PrefabInstance: {fileID: 80408563}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1972813217
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7911,6 +7939,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 89bbb1dd285ce9348ad00b82c25f8c7f, type: 3}
+--- !u!1 &2020871514 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 672263057, guid: 76bdabc2740ee8741982a89fa7964347, type: 3}
+  m_PrefabInstance: {fileID: 1013592264}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2053760473
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -1759,7 +1759,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 18
-      m_TileSpriteIndex: 17
+      m_TileSpriteIndex: 18
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -3030,10 +3030,10 @@ Tilemap:
     m_Data: {fileID: 21300000, guid: 21dc5bb7f3ae8014cb42df18492e2265, type: 3}
   - m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 1
-    m_Data: {fileID: 21300000, guid: 4c0033e7bf21d6e4689a446a3c55ac3c, type: 3}
   - m_RefCount: 0
     m_Data: {fileID: 0}
+  - m_RefCount: 1
+    m_Data: {fileID: 21300000, guid: 4c0033e7bf21d6e4689a446a3c55ac3c, type: 3}
   m_TileMatrixArray:
   - m_RefCount: 173
     m_Data:
@@ -3535,6 +3535,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 264348939, guid: 76bdabc2740ee8741982a89fa7964347, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1477027890, guid: 76bdabc2740ee8741982a89fa7964347, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1561058610, guid: 76bdabc2740ee8741982a89fa7964347, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7388913511883731284, guid: 76bdabc2740ee8741982a89fa7964347, type: 3}
       propertyPath: m_Name
       value: LevelLoader
@@ -3582,10 +3594,6 @@ PrefabInstance:
     - target: {fileID: 7388913511883731285, guid: 76bdabc2740ee8741982a89fa7964347, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7388913511883731286, guid: 76bdabc2740ee8741982a89fa7964347, type: 3}
-      propertyPath: sceneName
-      value: Level2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 76bdabc2740ee8741982a89fa7964347, type: 3}
