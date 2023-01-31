@@ -11,7 +11,7 @@ public class HareMovement : MonoBehaviour
 
     [SerializeField] private Rigidbody2D rb;
     private SpriteRenderer spriteRenderer;
-    List<Collider2D> switchColliders = new List<Collider2D>();
+    public List<Collider2D> switchColliders = new List<Collider2D>();
 
     public LayerMask ground;
 
