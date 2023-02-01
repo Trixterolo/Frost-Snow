@@ -753,7 +753,7 @@ MonoBehaviour:
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 0
-  m_FillAmount: 0.999998
+  m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
@@ -830,7 +830,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0.114922136, b: 0, a: 1}
+  m_Color: {r: 1, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -920,7 +920,7 @@ MonoBehaviour:
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 0
-  m_FillAmount: 0.999998
+  m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
@@ -997,7 +997,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0.114922136, b: 0, a: 1}
+  m_Color: {r: 1, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1025,7 +1025,7 @@ GameObject:
   - component: {fileID: 499610306524965160}
   - component: {fileID: 751476144173552791}
   - component: {fileID: 2845614427566921936}
-  - component: {fileID: 2769509598155042744}
+  - component: {fileID: 4517950266594007337}
   m_Layer: 0
   m_Name: SnowProgressBar
   m_TagString: Untagged
@@ -1093,7 +1093,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &2769509598155042744
+--- !u!114 &4517950266594007337
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1102,16 +1102,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 5156194485501175454}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 853ba594623510e4aa211c81787ac6d3, type: 3}
+  m_Script: {fileID: 11500000, guid: aa408a911304e5640934af6a3fdaea47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hareMovement: {fileID: 0}
   minimum: 0
-  maximum: 100
-  current: 100
   mask: {fileID: 3741151671697059518}
   fill: {fileID: 1333342838902922980}
-  color: {r: 1, g: 0.114922136, b: 0, a: 1}
-  decreaseHPbyMovement: 0.01
+  color: {r: 1, g: 0, b: 0, a: 1}
+  maximumHealth: 100
+  currentHealth: 100
+  moveDamage: 0.05
 --- !u!1 &5789890330590165671
 GameObject:
   m_ObjectHideFlags: 0
@@ -1199,7 +1200,7 @@ GameObject:
   - component: {fileID: 491640641017996459}
   - component: {fileID: 3729352956496715551}
   - component: {fileID: 6129216059060117310}
-  - component: {fileID: 4772316653994049823}
+  - component: {fileID: 3832715119184442707}
   m_Layer: 0
   m_Name: FrostProgressBar
   m_TagString: Untagged
@@ -1267,7 +1268,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &4772316653994049823
+--- !u!114 &3832715119184442707
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1276,16 +1277,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 6868315380412345683}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 853ba594623510e4aa211c81787ac6d3, type: 3}
+  m_Script: {fileID: 11500000, guid: 980fddccf8bee5b4daff0341ed225bbe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  wolfMovement: {fileID: 0}
   minimum: 0
-  maximum: 100
-  current: 100
   mask: {fileID: 1087436658154941442}
   fill: {fileID: 1952281354153818777}
-  color: {r: 1, g: 0.114922136, b: 0, a: 1}
-  decreaseHPbyMovement: 0.01
+  color: {r: 1, g: 0, b: 0, a: 1}
+  maximumHealth: 100
+  currentHealth: 100
+  moveDamage: 0.05
+  injuredState: 0
 --- !u!1 &7388913510717019206
 GameObject:
   m_ObjectHideFlags: 0

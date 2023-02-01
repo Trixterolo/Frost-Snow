@@ -4,15 +4,14 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-[ExecuteInEditMode()]
-public class StatusBar : MonoBehaviour
+
+public class SnowStatusBar : MonoBehaviour
 {
-    [SerializeField] WolfMovement wolfMovement;
     [SerializeField] HareMovement hareMovement;
     public float minimum;
 
-    public float maximum;
-    public float current;
+    //public float maximum;
+    //public float current;
     public Image mask;
     public Image fill;
     public Color color;
@@ -25,7 +24,7 @@ public class StatusBar : MonoBehaviour
 
     void Start()
     {
-        currentHealth = maximumHealth;
+       // currentHealth = maximumHealth;
     }
 
     // Update is called once per frame
@@ -58,7 +57,6 @@ public class StatusBar : MonoBehaviour
         if (currentHealth <= 0)
         {
             Debug.Log("Player died to Exhaustion");
-            wolfMovement.DeathState();
             hareMovement.DeathState();
             Invoke("RestartLevel", 1f);
         }

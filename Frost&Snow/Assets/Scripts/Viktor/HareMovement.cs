@@ -26,7 +26,7 @@ public class HareMovement : MonoBehaviour
     // const string SNOW_SHOOT = "Snow_Shoot";
 
     //StatusBar
-    [SerializeField] StatusBar statusBar;
+    [SerializeField] SnowStatusBar statusBar;
 
     private void Start()
     {
@@ -97,9 +97,9 @@ public class HareMovement : MonoBehaviour
             }
         }
 
-        if(horizontal > 0f)
+        if(horizontal > 0f || horizontal <0f || rb.velocity.y > 0f)
         {
-            statusBar.GetCurrentFill();
+            statusBar.Damage();
         }
     }
     //Raycast grounded check
@@ -152,5 +152,13 @@ public class HareMovement : MonoBehaviour
         isFacingRight = !isFacingRight;
 
         transform.Rotate(0f, 180f, 0f);
+    }
+
+    public void DeathState()
+    {
+        animator.enabled = false;
+        speed = 0;
+        rb.velocity = Vector2.zero;
+
     }
 }

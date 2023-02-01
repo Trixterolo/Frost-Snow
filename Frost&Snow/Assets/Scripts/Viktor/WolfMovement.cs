@@ -21,7 +21,8 @@ public class WolfMovement : MonoBehaviour
 
     bool isFacingRight = true;
 
-
+    //Damage
+    [SerializeField] FrostStatusBar statusBar;
 
 
     private void Start()
@@ -67,6 +68,13 @@ public class WolfMovement : MonoBehaviour
         else
         {
             currentSpeed = grabSpeed;
+        }
+
+
+        //Damaged when move
+        if (horizontal > 0f || horizontal < 0f || rb.velocity.y > 0f)
+        {
+            statusBar.Damage();
         }
     }
 
@@ -136,5 +144,12 @@ public class WolfMovement : MonoBehaviour
         isFacingRight = !isFacingRight;
 
         transform.Rotate(0f, 180f, 0f);
+    }
+
+    public void DeathState()
+    {
+        defaultSpeed = 0;
+        rb.velocity = Vector2.zero;
+        
     }
 }
