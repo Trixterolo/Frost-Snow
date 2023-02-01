@@ -23,8 +23,10 @@ public class HareMovement : MonoBehaviour
     const string SNOW_IDLE = "Snow_Idle";
     const string SNOW_RUN = "Snow_Run";
     const string SNOW_JUMP = "Snow_Jump";
-   // const string SNOW_SHOOT = "Snow_Shoot";
+    // const string SNOW_SHOOT = "Snow_Shoot";
 
+    //StatusBar
+    [SerializeField] StatusBar statusBar;
 
     private void Start()
     {
@@ -59,6 +61,7 @@ public class HareMovement : MonoBehaviour
             switchColliders.ForEach(n => n.SendMessage("Use", SendMessageOptions.DontRequireReceiver));
         }
 
+        
     }
 
 
@@ -94,6 +97,10 @@ public class HareMovement : MonoBehaviour
             }
         }
 
+        if(horizontal > 0f)
+        {
+            statusBar.GetCurrentFill();
+        }
     }
     //Raycast grounded check
     public bool IsGrounded()

@@ -670,6 +670,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1011710016152818254, guid: e4366f647e433e64dbf02fd5c88dc20a, type: 3}
+      propertyPath: statusBar
+      value: 
+      objectReference: {fileID: 2020603823}
     - target: {fileID: 1011710016152818289, guid: e4366f647e433e64dbf02fd5c88dc20a, type: 3}
       propertyPath: m_Name
       value: Snow
@@ -3377,6 +3381,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 517374600696ee44fa171930ebe48f66, type: 3}
+--- !u!114 &2020603823 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2769509598155042744, guid: 76bdabc2740ee8741982a89fa7964347, type: 3}
+  m_PrefabInstance: {fileID: 7388913510800845288}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 853ba594623510e4aa211c81787ac6d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1437724537831793863
 PrefabInstance:
   m_ObjectHideFlags: 0
