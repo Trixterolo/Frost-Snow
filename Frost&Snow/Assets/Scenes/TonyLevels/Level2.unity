@@ -182,6 +182,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7679412440007557520, guid: 89bbb1dd285ce9348ad00b82c25f8c7f, type: 3}
+      propertyPath: snowBar
+      value: 
+      objectReference: {fileID: 1923906194}
+    - target: {fileID: 7679412440007557520, guid: 89bbb1dd285ce9348ad00b82c25f8c7f, type: 3}
+      propertyPath: frostBar
+      value: 
+      objectReference: {fileID: 1923906195}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 89bbb1dd285ce9348ad00b82c25f8c7f, type: 3}
 --- !u!114 &134307569 stripped
@@ -986,6 +994,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6085011760294562383, guid: 87401e85f0a47ab45a4c7098a7383b03, type: 3}
+      propertyPath: frostBar
+      value: 
+      objectReference: {fileID: 1923906195}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 87401e85f0a47ab45a4c7098a7383b03, type: 3}
 --- !u!1001 &944493695
@@ -3859,6 +3871,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7679412440007557520, guid: 89bbb1dd285ce9348ad00b82c25f8c7f, type: 3}
+      propertyPath: snowBar
+      value: 
+      objectReference: {fileID: 1923906194}
+    - target: {fileID: 7679412440007557520, guid: 89bbb1dd285ce9348ad00b82c25f8c7f, type: 3}
+      propertyPath: frostBar
+      value: 
+      objectReference: {fileID: 1923906195}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 89bbb1dd285ce9348ad00b82c25f8c7f, type: 3}
 --- !u!1 &2050428700

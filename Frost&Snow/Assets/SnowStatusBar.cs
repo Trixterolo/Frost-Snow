@@ -62,6 +62,11 @@ public class SnowStatusBar : MonoBehaviour
         }
     }
 
+    public void Heal()
+    {
+        currentHealth += 12.5f;
+    }
+
     void RestartLevel()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
