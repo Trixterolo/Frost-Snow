@@ -19,6 +19,8 @@ public class SnowStatusBar : MonoBehaviour
     public float maximumHealth = 100f;
     public float currentHealth;
     public float moveDamage = 0.05f;
+
+    float lerpSpeed;
     // Start is called before the first frame update
 
 
@@ -31,6 +33,7 @@ public class SnowStatusBar : MonoBehaviour
     void Update()
     {
         if (currentHealth > maximumHealth) currentHealth = maximumHealth;
+        lerpSpeed = 3f * Time.deltaTime;
         GetCurrentFill();
     }
 
@@ -40,7 +43,7 @@ public class SnowStatusBar : MonoBehaviour
         float maximumOffset = maximumHealth - minimum;
 
         float fillAmount = currentOffset / maximumOffset;
-        mask.fillAmount = fillAmount;
+        mask.fillAmount = Mathf.Lerp(mask.fillAmount, fillAmount, lerpSpeed);
 
 
         fill.color = color;

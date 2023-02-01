@@ -20,6 +20,8 @@ public class FrostStatusBar : MonoBehaviour
     public float currentHealth;
     public float moveDamage = 0.05f;
 
+    float lerpSpeed;
+
     //public bool injuredState = false;
     //float injuredHealth = 50f;
     // Start is called before the first frame update
@@ -34,6 +36,7 @@ public class FrostStatusBar : MonoBehaviour
     void Update()
     {
         if (currentHealth > maximumHealth) currentHealth = maximumHealth;
+        lerpSpeed = 3f * Time.deltaTime;
         GetCurrentFill();
     }
 
@@ -49,7 +52,8 @@ public class FrostStatusBar : MonoBehaviour
 
 
         float fillAmount = currentOffset / maximumOffset;
-        mask.fillAmount = fillAmount;
+        mask.fillAmount = Mathf.Lerp(mask.fillAmount, fillAmount, lerpSpeed);
+            //fillAmount;
 
 
         fill.color = color;
