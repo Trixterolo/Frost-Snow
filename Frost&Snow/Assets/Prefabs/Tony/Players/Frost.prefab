@@ -99,6 +99,7 @@ GameObject:
   - component: {fileID: 1466071662}
   - component: {fileID: 6838472801446705992}
   - component: {fileID: 4680181896151706568}
+  - component: {fileID: 3499929117028736230}
   m_Layer: 7
   m_Name: Frost
   m_TagString: Frost
@@ -163,7 +164,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 10
-  m_Sprite: {fileID: -1519598491, guid: 84bf7048f5149cf4bbf2d8409d170a0b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d42e77932b974c44ea05c58ecf13a991, type: 3}
   m_Color: {r: 0.72075474, g: 0.85859776, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -215,6 +216,7 @@ MonoBehaviour:
   wolfBite: {fileID: 0}
   moveState: 0
   defaultSpeed: 8
+  statusBar: {fileID: 0}
 --- !u!114 &1466071662
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -248,7 +250,7 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.3}
+  m_Offset: {x: 0, y: -0.5}
   m_Size: {x: 3, y: 1.25}
   m_Direction: 1
 --- !u!70 &4680181896151706568
@@ -264,6 +266,26 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.3}
+  m_Offset: {x: 0, y: -0.5}
   m_Size: {x: 3, y: 1.25}
   m_Direction: 1
+--- !u!95 &3499929117028736230
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6120256016845160422}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a0935759897232d42bce1fc71ed825c5, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0

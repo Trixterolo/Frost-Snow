@@ -9279,7 +9279,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7388913511883731284, guid: 76bdabc2740ee8741982a89fa7964347, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7388913511883731285, guid: 76bdabc2740ee8741982a89fa7964347, type: 3}
       propertyPath: m_RootOrder
@@ -9327,7 +9327,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7388913511883731286, guid: 76bdabc2740ee8741982a89fa7964347, type: 3}
       propertyPath: sceneName
-      value: Level1
+      value: CampScene3
       objectReference: {fileID: 0}
     - target: {fileID: 7867669472120878324, guid: 76bdabc2740ee8741982a89fa7964347, type: 3}
       propertyPath: m_IsActive
@@ -10183,6 +10183,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1849188c9a39bb44e99d0f73bf468f92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  levelLoader: {fileID: 0}
   typingSpeed: 0.04
   dialoguePanel: {fileID: 743604501}
   continueIcon: {fileID: 925113150}

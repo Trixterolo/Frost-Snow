@@ -1167,7 +1167,7 @@ PrefabInstance:
       objectReference: {fileID: 2119751541}
     - target: {fileID: 3832715119184442707, guid: 76bdabc2740ee8741982a89fa7964347, type: 3}
       propertyPath: currentHealth
-      value: 75
+      value: 85
       objectReference: {fileID: 0}
     - target: {fileID: 4517950266594007337, guid: 76bdabc2740ee8741982a89fa7964347, type: 3}
       propertyPath: hareMovement
@@ -1175,7 +1175,7 @@ PrefabInstance:
       objectReference: {fileID: 80408564}
     - target: {fileID: 4517950266594007337, guid: 76bdabc2740ee8741982a89fa7964347, type: 3}
       propertyPath: currentHealth
-      value: 75
+      value: 85
       objectReference: {fileID: 0}
     - target: {fileID: 7388913511883731284, guid: 76bdabc2740ee8741982a89fa7964347, type: 3}
       propertyPath: m_Name
@@ -1224,6 +1224,10 @@ PrefabInstance:
     - target: {fileID: 7388913511883731285, guid: 76bdabc2740ee8741982a89fa7964347, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7388913511883731286, guid: 76bdabc2740ee8741982a89fa7964347, type: 3}
+      propertyPath: sceneName
+      value: CampScene5
       objectReference: {fileID: 0}
     - target: {fileID: 7867669472120878324, guid: 76bdabc2740ee8741982a89fa7964347, type: 3}
       propertyPath: m_IsActive
@@ -8675,6 +8679,10 @@ PrefabInstance:
     - target: {fileID: 6120256016845160444, guid: c973efcb6abe18a418e44e8d948d7b48, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6838472801446705992, guid: c973efcb6abe18a418e44e8d948d7b48, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c973efcb6abe18a418e44e8d948d7b48, type: 3}
