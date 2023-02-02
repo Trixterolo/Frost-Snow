@@ -6,7 +6,10 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/TonyLevels/IntroAnimasjon.unity
+    path: Assets/Scenes/TonyLevels/StartScene.unity
+    guid: e52f180bcf4205748994c5f4a8faed1f
+  - enabled: 1
+    path: Assets/Scenes/TonyLevels/IntroAnimation.unity
     guid: 713da6452bd78af40aff9ae5e0f21e17
   - enabled: 1
     path: Assets/Scenes/TonyLevels/IntroScene.unity
