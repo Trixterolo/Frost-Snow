@@ -15,9 +15,10 @@ public class HareMovement : MonoBehaviour
 
     public LayerMask ground;
 
+    private bool isFacingRight = true;
+
     Animator animator;
     private string currentState;
-    private bool isFacingRight = true;
 
     //Animation States, can also be done witn Enum
     const string SNOW_IDLE = "Snow_Idle";

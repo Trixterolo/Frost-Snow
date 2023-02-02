@@ -21,6 +21,15 @@ public class WolfMovement : MonoBehaviour
 
     bool isFacingRight = true;
 
+    Animator animator;
+    private string currentState;
+
+    //Animation States, can also be done witn Enum
+    const string FROST_IDLE = "Frost_Idle";
+    const string FROST_RUN = "Frost_Run";
+    const string FROST_JUMP = "Frost_Jump";
+    // const string SNOW_SHOOT = "Snow_Shoot";
+
     //Damage
     [SerializeField] FrostStatusBar statusBar;
 
@@ -30,6 +39,9 @@ public class WolfMovement : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         wolfBite = GetComponent<WolfBite>();
+
+        animator = GetComponent<Animator>();
+
     }
 
     void Update()
@@ -61,7 +73,25 @@ public class WolfMovement : MonoBehaviour
 
                 //gameObject.BroadcastMessage("IsFacingRight", true);
         }
-        if(moveState == 0)
+
+
+
+        //Animations
+        if (IsGrounded() && rb.velocity.y <= Mathf.Epsilon)
+        {
+
+            if (horizontal != 0)
+            {
+                ChangeAnimationState(FROST_RUN);
+            }
+            else
+            {
+                ChangeAnimationState(FROST_IDLE);
+            }
+        }
+
+        //toggle grab
+        if (moveState == 0)
         {
             currentSpeed = defaultSpeed;
         }
@@ -110,31 +140,52 @@ public class WolfMovement : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.W) && IsGrounded())
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
+            ChangeAnimationState(FROST_JUMP);
         }
 
         if (Input.GetKeyUp(KeyCode.W) && rb.velocity.y > 0f)
         {
             rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.5f);
+            ChangeAnimationState(FROST_JUMP);
         }
 
-        bool IsGrounded()
+        //bool IsGrounded()
+        //{
+        //    Vector2 position = transform.position;
+        //    Vector2 direction = Vector2.down;
+        //    float distance = 1.2f;
+
+
+
+        //    Debug.DrawRay(position, direction, Color.green);
+        //    RaycastHit2D hit = Physics2D.Raycast(position, direction, distance, ground);
+        //    if (hit.collider != null)
+        //    {
+        //        return true;
+        //    }
+
+        //    return false;
+
+        //}
+    }
+
+    public bool IsGrounded()
+    {
+        Vector2 position = transform.position;
+        Vector2 direction = Vector2.down;
+        float distance = 1.2f;
+
+
+
+        Debug.DrawRay(position, direction, Color.green);
+        RaycastHit2D hit = Physics2D.Raycast(position, direction, distance, ground);
+        if (hit.collider != null)
         {
-            Vector2 position = transform.position;
-            Vector2 direction = Vector2.down;
-            float distance = 1.2f;
-
-
-
-            Debug.DrawRay(position, direction, Color.green);
-            RaycastHit2D hit = Physics2D.Raycast(position, direction, distance, ground);
-            if (hit.collider != null)
-            {
-                return true;
-            }
-
-            return false;
-
+            return true;
         }
+
+        return false;
+
     }
 
 
@@ -144,6 +195,18 @@ public class WolfMovement : MonoBehaviour
         isFacingRight = !isFacingRight;
 
         transform.Rotate(0f, 180f, 0f);
+    }
+
+    private void ChangeAnimationState(string newState)
+    {
+        //stop the same animation from interrupting itself
+        if (currentState == newState) return;
+
+        //play animation
+        animator.Play(newState);
+
+        //reassign the current state
+        currentState = newState;
     }
 
     public void DeathState()
