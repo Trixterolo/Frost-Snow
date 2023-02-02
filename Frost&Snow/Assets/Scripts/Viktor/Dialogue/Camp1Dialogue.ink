@@ -15,7 +15,7 @@ Her, prøv en. De er saftige.. #speaker:Snow #layout:Right #portrait:SnowNeutral
 
 <i>Frost tar et bær.</i>#speaker:Frost #portrait:FrostNeutral #layout:Left #audio:defaultAudio
 
-Hmm, ikke like saftig som harekjøtt.. #audio:wolfAudio
+Hmm, ikke like mørt som harekjøtt.. #audio:wolfAudio
 
 Hei! #speaker:Snow #layout:Right #portrait:SnowNeutral #audio:hareAudio
 

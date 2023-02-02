@@ -11,6 +11,9 @@ using UnityEditor.U2D.Path.GUIFramework;
 
 public class DialogueManager : MonoBehaviour
 {
+
+    [SerializeField] LevelLoader levelLoader;
+
     [Header("Params")]
     [SerializeField] private float typingSpeed = 0.04f;
 
@@ -165,6 +168,9 @@ public class DialogueManager : MonoBehaviour
         dialogueIsPlaying = false;
         dialoguePanel.SetActive(false);
         dialogueText.text = "";
+        Debug.Log("dialogue is over");
+
+        levelLoader.LoadNextLevel();
 
         //Go back to default audio
         SetCurrentAudioInfo(defaultAudioInfo.id);
