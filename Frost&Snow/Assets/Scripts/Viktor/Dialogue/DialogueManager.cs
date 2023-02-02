@@ -78,6 +78,7 @@ public class DialogueManager : MonoBehaviour
         instance = this;
 
         audioSource = this.gameObject.AddComponent<AudioSource>();
+        audioSource.volume = 0.1f;
         currentAudioInfo = defaultAudioInfo;
     }
 

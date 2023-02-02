@@ -14,10 +14,14 @@ public class DialogueTrigger : MonoBehaviour
 
     private bool playerInRange;
 
+    private bool canStart;
+
     private void Awake()
     {
         playerInRange = false;
         visualCue.SetActive(false);
+        canStart = true;
+        
     }
 
     
@@ -29,9 +33,10 @@ public class DialogueTrigger : MonoBehaviour
         if (playerInRange && !DialogueManager.GetInstance().dialogueIsPlaying)
         {
             visualCue.SetActive(true);
-            if (Input.GetKeyDown(KeyCode.Space))
+            if (canStart)
             {
                 DialogueManager.GetInstance().EnterDialogueMode(inkJSON); //nice way to get info from other scripts?
+                canStart = false;
             }
         } else
         {
