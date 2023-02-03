@@ -208,7 +208,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2220e1e827f257e469ba832ab1d66da0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpingPower: 10
+  jumpingPower: 10.6
   rb: {fileID: 0}
   ground:
     serializedVersion: 2
