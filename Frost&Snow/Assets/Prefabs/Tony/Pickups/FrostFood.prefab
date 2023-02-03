@@ -98,6 +98,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7bee7751a47ef044ca7bf6f7ae1f1333, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  frostBar: {fileID: 0}
+  eatFood: {fileID: 8239982899930616659, guid: e0ae70917b9562c44b8ef336dd97399f, type: 3}
 --- !u!58 &6085011760294562376
 CircleCollider2D:
   m_ObjectHideFlags: 0

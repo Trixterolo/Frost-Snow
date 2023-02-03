@@ -5,14 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class NextLevelCollision : MonoBehaviour
 {
+
+    [SerializeField] LevelLoader levelLoader;
+
     private void OnTriggerEnter2D(Collider2D player)
     {
-        Invoke("NextLevel", 0.5f);
+        levelLoader.LoadNextLevel();
     }
 
-
-    private void NextLevel()
-    {
-        SceneManager.LoadScene("Level4", LoadSceneMode.Single);
-    }
 }

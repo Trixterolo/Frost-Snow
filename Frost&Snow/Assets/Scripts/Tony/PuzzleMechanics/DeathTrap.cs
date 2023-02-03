@@ -11,7 +11,8 @@ public class DeathTrap : MonoBehaviour
         if (collision.CompareTag("Frost") || collision.CompareTag("Snow"))
         {
             Debug.Log(collision.gameObject.name + " died");
-            Destroy(collision.gameObject);
+            collision.gameObject.SetActive(false);
+            //Destroy(collision.gameObject);
             Invoke("RestartLevel",1f);
         }
     }

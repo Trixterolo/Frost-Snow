@@ -116,4 +116,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelLoader: {fileID: 7388913511883731286, guid: 76bdabc2740ee8741982a89fa7964347, type: 3}
   playerRequirement: 4
+  playSound: {fileID: 4153310293001929100, guid: 840eff0c54e57f04eb6fcccf3356fd0b, type: 3}
   playerReached: 0

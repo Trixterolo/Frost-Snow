@@ -116,3 +116,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   snowBar: {fileID: 0}
   frostBar: {fileID: 0}
+  eatFood: {fileID: 3124773295305425950, guid: 8d5800134193ac84884807902efb7d68, type: 3}

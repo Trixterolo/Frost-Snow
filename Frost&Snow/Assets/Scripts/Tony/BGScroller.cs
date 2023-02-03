@@ -20,7 +20,7 @@ public class BGScroller : MonoBehaviour
 
         rb2d.velocity = new Vector2(scrollSpeed, 0);
 
-        ResetObstacle();
+       // ResetObstacle();
     }
 
     private void Update()
@@ -29,13 +29,13 @@ public class BGScroller : MonoBehaviour
         {
             Vector2 resetPostion = new Vector2(width * 2f, 0);
             transform.position = (Vector2)transform.position + resetPostion;
-            ResetObstacle(); 
+            //ResetObstacle(); 
         }
     }
 
-    void ResetObstacle() //infinite spawn within the stage.
-    {
-        transform.GetChild(0).localPosition = new Vector3(0, Random.Range(-1, 3), 0);
-    }
+    //void ResetObstacle() //infinite spawn within the stage.
+    //{
+    //    transform.GetChild(0).localPosition = new Vector3(0, Random.Range(-1, 3), 0);
+    //}
 
 }
