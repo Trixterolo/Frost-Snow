@@ -7,7 +7,7 @@ using Ink.Runtime;
 using UnityEngine.EventSystems;
 using UnityEngine.SearchService;
 using UnityEngine.UI;
-using UnityEditor.U2D.Path.GUIFramework;
+
 
 public class DialogueManager : MonoBehaviour
 {
