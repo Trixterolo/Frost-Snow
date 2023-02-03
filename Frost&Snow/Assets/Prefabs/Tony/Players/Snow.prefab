@@ -124,14 +124,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 6
-  jumpingPower: 12.1
+  jumpingPower: 12
   rb: {fileID: 0}
   switchColliders: []
   ground:
     serializedVersion: 2
     m_Bits: 192
   statusBar: {fileID: 0}
-  playSound: {fileID: 38824699489903210, guid: d13739eaa8a60b5438041b7f965168cc, type: 3}
 --- !u!95 &1631561548
 Animator:
   serializedVersion: 5
@@ -166,7 +165,7 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.32, y: -0.2}
-  m_Size: {x: 1.3, y: 1}
+  m_Size: {x: 1.3, y: 0.8}
   m_Direction: 1
 --- !u!70 &625433720085880999
 CapsuleCollider2D:
@@ -182,7 +181,7 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.32, y: -0.2}
-  m_Size: {x: 1.3, y: 1}
+  m_Size: {x: 1.3, y: 0.8}
   m_Direction: 1
 --- !u!1 &1028526101845514471
 GameObject:

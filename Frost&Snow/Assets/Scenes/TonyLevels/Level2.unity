@@ -3974,10 +3974,6 @@ PrefabInstance:
       propertyPath: statusBar
       value: 
       objectReference: {fileID: 1923906194}
-    - target: {fileID: 1011710016152818254, guid: e4366f647e433e64dbf02fd5c88dc20a, type: 3}
-      propertyPath: jumpingPower
-      value: 13
-      objectReference: {fileID: 0}
     - target: {fileID: 1011710016152818289, guid: e4366f647e433e64dbf02fd5c88dc20a, type: 3}
       propertyPath: m_Name
       value: Snow
