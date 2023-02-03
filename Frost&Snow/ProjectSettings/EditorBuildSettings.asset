@@ -39,7 +39,10 @@ EditorBuildSettings:
     path: Assets/Scenes/TonyLevels/Level5Intro.unity
     guid: 8f867e5bfcdf460468c4142f1b1d06cb
   - enabled: 1
-    path: Assets/Scenes/JonasLevels/SnowRunning Scene.unity
+    path: Assets/Scenes/JonasLevels/FrostChasingScene.unity
+    guid: 9dd1269b47b370841b5008e20fc385c7
+  - enabled: 1
+    path: Assets/Scenes/JonasLevels/SnowRunningScene.unity
     guid: e0f41362b7c0ec948a6ffcb2e6ac8820
   - enabled: 1
     path: Assets/Scenes/TonyLevels/CampScene4.unity

@@ -280,7 +280,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7388913511883731286, guid: 76bdabc2740ee8741982a89fa7964347, type: 3}
       propertyPath: sceneName
-      value: SnowRunning Scene
+      value: FrostChasingScene
       objectReference: {fileID: 0}
     - target: {fileID: 7867669472120878324, guid: 76bdabc2740ee8741982a89fa7964347, type: 3}
       propertyPath: m_IsActive
