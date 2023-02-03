@@ -29,7 +29,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/TonyLevels/Level4.unity
     guid: d3682e58cc904b84289db9ee012d29c2
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/TonyLevels/CampScene3-2.unity
     guid: 87afa2748ff8f3d4b90af54ad76d48c9
   - enabled: 1
@@ -56,4 +56,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/TonyLevels/Ending/Fin.unity
     guid: cfb597130d861264cbf106ed423cfe33
+  - enabled: 1
+    path: Assets/Scenes/TonyLevels/CampScene2.unity
+    guid: 70ce09aeb2852e145ab2653f459c0269
+  - enabled: 1
+    path: Assets/Scenes/TonyLevels/CampScene3.unity
+    guid: 6763302045c982c43977d0ff482c4992
   m_configObjects: {}

@@ -19,13 +19,13 @@ Vent på Snø! #speaker:Frost #portrait:FrostNeutral #layout:Left #audio:wolfAud
 
 <i>Ulvene nærmer seg enda mer.</i> #speaker:??? #layout:Left #portrait:FrostNeutral #audio:defaultAudio
 
-Hva gjør du med den sprett-Noldusen der? Vi trodde du var død! #speaker:Ulvert #portrait:FrostNeutral #layout:Left #audio:wolfAudio
+Hva gjør du med den sprett-Noldusen der? Vi trodde du var død! #speaker:Ulvert #portrait:Ulvert #layout:Left #audio:ulvertAudio
 
 Jeg har hatt det fint. Dette er Snø. Han skal til flokken sin. #speaker:Frost #portrait:FrostNeutral #layout:Left #audio:wolfAudio
 
 <i>Harene nærmer seg også.</i> #speaker:??? #layout:Right #portrait:SnowNeutral #audio:defaultAudio
 
-Du tuller nå, ikke sant? Vi kan jo bare spise han i stedet! #speaker:Ulvert #portrait:FrostNeutral #layout:Left #audio:wolfAudio
+Du tuller nå, ikke sant? Vi kan jo bare spise han i stedet! #speaker:Ulvert #portrait:Ulvert #layout:Left #audio:ulvertAudio
 
 <i>Ulvert bykser mot Snø, så Snø spretter sidelengs. </i> #speaker:Ulvert #portrait:FrostNeutral #layout:Left #audio:defaultAudio
 
@@ -47,11 +47,11 @@ Vi har bær… #speaker:Snø #layout:Right #portrait:SnowNeutral #audio:hareAudi
 
 <i>Alle følger med på han, før han skyver bøtta med snuten bort til ulveflokken.</i> #speaker:Frost #portrait:FrostNeutral #layout:Left #audio:defaultAudio
 
-<i> Ulvert er skeptisk. Han tar motvillig snuta ned i bøtta.</i> #speaker:Ulvert #portrait:FrostNeutral #layout:Left #audio:defaultAudio
+<i> Ulvert er skeptisk. Han tar motvillig snuta ned i bøtta.</i> #speaker:Ulvert #portrait:Ulvert #layout:Left #audio:defaultAudio
 
 <i>Det er stille.</i> #speaker:??? #layout:Right #portrait:default #audio:defaultAudio
 
-<i>Ulvert dukker opp igjen fra bøtta i noen sekunder… før han dykker ned og jafser i seg bærene.</i> #speaker:Ulvert #portrait:FrostNeutral #layout:Left #audio:defaultAudio
+<i>Ulvert dukker opp igjen fra bøtta i noen sekunder… før han dykker ned og jafser i seg bærene.</i> #speaker:Ulvert #portrait:Ulvert #layout:Left #audio:defaultAudio
 
 Det var godt, ja? #speaker:Frost #portrait:FrostNeutral #layout:Left #audio:wolfAudio
 
