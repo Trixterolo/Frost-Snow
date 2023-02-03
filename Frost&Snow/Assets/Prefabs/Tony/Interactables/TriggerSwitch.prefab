@@ -105,6 +105,7 @@ MonoBehaviour:
   onMessage: ElevatorOnEnable
   offMessage: 
   resetTime: 2
+  playSound: {fileID: 38824699489903210, guid: d13739eaa8a60b5438041b7f965168cc, type: 3}
 --- !u!95 &811175548
 Animator:
   serializedVersion: 5
