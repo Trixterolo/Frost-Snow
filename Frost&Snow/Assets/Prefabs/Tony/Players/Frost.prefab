@@ -237,6 +237,7 @@ MonoBehaviour:
   colliderChainHead: {fileID: 0}
   spikeGate: {fileID: 0}
   openGate: {fileID: 0}
+  playSound: {fileID: 8560064956695298626, guid: 0fa50ef8643dcdb498f63e73f90d65e2, type: 3}
 --- !u!70 &6838472801446705992
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

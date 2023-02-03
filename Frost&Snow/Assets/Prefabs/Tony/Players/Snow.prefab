@@ -124,12 +124,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 6
-  jumpingPower: 12
+  jumpingPower: 12.1
   rb: {fileID: 0}
   switchColliders: []
   ground:
     serializedVersion: 2
     m_Bits: 192
+  statusBar: {fileID: 0}
+  playSound: {fileID: 38824699489903210, guid: d13739eaa8a60b5438041b7f965168cc, type: 3}
 --- !u!95 &1631561548
 Animator:
   serializedVersion: 5
