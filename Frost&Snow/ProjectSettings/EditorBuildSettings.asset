@@ -18,7 +18,7 @@ EditorBuildSettings:
     path: Assets/Scenes/TonyLevels/Level1.unity
     guid: abf0ae03587a89145aabc0033aa06a13
   - enabled: 1
-    path: Assets/Scenes/TonyLevels/CampScene1.unity
+    path: Assets/Scenes/ViktorLevels/CampScene1.unity
     guid: 88857a584d463774aada1eb3f0982956
   - enabled: 1
     path: Assets/Scenes/TonyLevels/Level2.unity
@@ -33,10 +33,10 @@ EditorBuildSettings:
     path: Assets/Scenes/TonyLevels/CampScene3-2.unity
     guid: 87afa2748ff8f3d4b90af54ad76d48c9
   - enabled: 1
-    path: Assets/Scenes/TonyLevels/CampScene3-3.unity
+    path: Assets/Scenes/ViktorLevels/CampScene3-3.unity
     guid: 5b0715478c2fa0a4993fc7d911f4d31b
   - enabled: 1
-    path: Assets/Scenes/TonyLevels/Level5Intro.unity
+    path: Assets/Scenes/ViktorLevels/Level5Intro.unity
     guid: 8f867e5bfcdf460468c4142f1b1d06cb
   - enabled: 1
     path: Assets/Scenes/JonasLevels/FrostChasingScene.unity
@@ -45,24 +45,24 @@ EditorBuildSettings:
     path: Assets/Scenes/JonasLevels/SnowRunningScene.unity
     guid: e0f41362b7c0ec948a6ffcb2e6ac8820
   - enabled: 1
-    path: Assets/Scenes/TonyLevels/CampScene4.unity
+    path: Assets/Scenes/ViktorLevels/CampScene4.unity
     guid: acc807d586a4ff342ba7f79393161458
   - enabled: 1
-    path: Assets/Scenes/TonyLevels/Ending/EndingP1.unity
+    path: Assets/Scenes/ViktorLevels/Ending/EndingP1.unity
     guid: 3b54ecf906aaa444cb101ba0601a1394
   - enabled: 1
-    path: Assets/Scenes/TonyLevels/Ending/EndingP2.unity
+    path: Assets/Scenes/ViktorLevels/Ending/EndingP2.unity
     guid: 8406f4d3c740025498323c8a7557d5f4
   - enabled: 1
-    path: Assets/Scenes/TonyLevels/Ending/EndingP3.unity
+    path: Assets/Scenes/ViktorLevels/Ending/EndingP3.unity
     guid: 7c1fb5b7a4e9bcf4aac1f0ef7ce0cb12
   - enabled: 1
-    path: Assets/Scenes/TonyLevels/Ending/Fin.unity
+    path: Assets/Scenes/ViktorLevels/Ending/Fin.unity
     guid: cfb597130d861264cbf106ed423cfe33
   - enabled: 1
-    path: Assets/Scenes/TonyLevels/CampScene2.unity
+    path: Assets/Scenes/ViktorLevels/CampScene2.unity
     guid: 70ce09aeb2852e145ab2653f459c0269
   - enabled: 1
-    path: Assets/Scenes/TonyLevels/CampScene3.unity
+    path: Assets/Scenes/ViktorLevels/CampScene3.unity
     guid: 6763302045c982c43977d0ff482c4992
   m_configObjects: {}
